@@ -1,8 +1,5 @@
-# Python Virtual Environment
-.venv
-
-# Database
-*.sqlite3
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
+
+# Python venv
+.venv

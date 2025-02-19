@@ -1,19 +1,12 @@
-import { ThemeProvider } from '@/components/providers/theme-provider';
+import { ThemeProvider } from 'next-themes';
 import { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
 };
 
-export default async function Providers({ children }: Props) {
-  return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      {children}
-    </ThemeProvider>
-  );
+export default function Providers({ children }: Props) {
+
+
+  return <ThemeProvider attribute="class">{children}</ThemeProvider>; // Wrap children with ThemeProvider after mount
 }
